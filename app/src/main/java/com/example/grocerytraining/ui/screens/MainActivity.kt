@@ -13,6 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.groceryshop.authentication.login_screen.LoginScreen
+import com.example.groceryshop.authentication.signup_screen.SignUpScreen
+import com.example.groceryshop.authentication.splash_screen.SplashScreen
 import com.example.grocerytraining.ui.theme.GroceryTrainingTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,15 +23,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            GroceryTrainingTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Grocery App",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            SplashScreen ({} ,{})
         }
+//            GroceryTrainingTheme {
+//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+//                    Greeting(
+//                        name = "Grocery App",
+//                        modifier = Modifier.padding(innerPadding)
+//                    )
+//                }
+//            }
+//        }
     }
 }
 
